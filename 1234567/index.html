@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>.</title>
+</head>
+<body style="margin:0;background:#fff;font-family:monospace;padding:3rem;line-height:2.5;">
+  <input id="a" type="number" placeholder="?" style="width:120px;font-size:1rem;font-family:monospace;border:none;border-bottom:1px solid #000;padding:0.3rem;margin-right:2rem;outline:none;">
+  <input id="b" type="number" placeholder="?" style="width:120px;font-size:1rem;font-family:monospace;border:none;border-bottom:1px solid #000;padding:0.3rem;outline:none;">
+  <br><br>
+  <button onclick="check()" style="font-family:monospace;border:1px solid #000;background:#fff;padding:0.4rem 1rem;cursor:pointer;margin-top:1rem;">_</button>
+  <p id="msg" style="margin-top:1rem;"></p>
+  <script>
+    function check() {
+      const a = parseInt(document.getElementById('a').value);
+      const b = parseInt(document.getElementById('b').value);
+      if ((a === 127 && b === 9721) || (a === 9721 && b === 127)) {
+        window.location.href = '../end/';
+      } else {
+        document.getElementById('msg').textContent = '.';
+      }
+    }
+  </script>
+</body>
+</html>
